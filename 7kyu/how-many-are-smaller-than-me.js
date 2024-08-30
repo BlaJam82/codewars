@@ -45,3 +45,11 @@ function smaller(nums) {
     }, 0);
   });
 }
+
+//===========================================================================
+
+function smaller(numbers) {
+  return numbers.map((x, i) =>
+    numbers.slice(i + 1).reduce((count, y) => count + (x > y), 0)
+  );
+}
